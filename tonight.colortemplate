@@ -1,0 +1,122 @@
+# vim: ft=colortemplate
+
+Full name: Tonight
+Short name: tonight
+Author: jnnl <juho@jnnl.net>
+Maintainer: jnnl <juho@jnnl.net>
+Website: https://github.com/jnnl/vim-tonight
+Description: Never put off till tomorrow what you can do tonight
+License: MIT
+
+Background: dark
+
+Color: foreground   #c6c6c6 ~
+Color: background   #262626 ~
+
+Color: grey0        #444444 ~
+Color: grey1        #626262 ~
+Color: grey2        #808080 ~
+Color: grey3        #dadada ~
+
+Color: red          #d75f5f ~
+Color: dark_red     #5f0000 ~
+Color: orange       #d7875f ~
+Color: light_orange #d7af87 ~
+Color: green        #afaf5f ~
+Color: dark_green   #005f00 ~
+Color: blue         #87afaf ~
+Color: dark_blue    #005f5f ~
+Color: purple       #af87af ~
+
+ColorColumn    foreground   grey0      none
+Conceal        foreground   grey0
+Cursor         none         none       reverse
+CursorColumn   ->           CursorLine
+CursorLine     foreground   grey0      none
+CursorLineNr   grey1        background
+DiffAdd        grey3        dark_green
+DiffDelete     dark_red     dark_red
+DiffChange     none         grey0
+DiffText       none         dark_blue
+Directory      blue         background
+EndOfBuffer    grey0        background
+ErrorMsg       grey3        dark_red
+FoldColumn     foreground   background
+Folded         grey2        background
+IncSearch      background   orange
+LineNr         grey0        background
+MatchParen     none         grey1
+ModeMsg        green        background
+MoreMsg        green        background
+NonText        grey1        background
+Normal         foreground   background
+Pmenu          foreground   grey1      none
+PmenuSbar      grey2        grey2
+PmenuSel       grey1        foreground
+PmenuThumb     grey2        grey1
+Question       green        background
+QuickFixLine   background   light_orange
+Search         background   light_orange
+SignColumn     foreground   background none
+SpecialKey     grey1        background
+SpellBad       red          background italic
+SpellCap       blue         background italic
+SpellLocal     green        background italic
+SpellRare      light_orange background italic
+StatusLine     light_orange grey0
+StatusLineNC   foreground   grey0
+TabLine        foreground   grey0
+TabLineFill    foreground   grey0
+TabLineSel     light_orange grey0
+Title          grey2        background
+VertSplit      grey0        grey0
+Visual         none         grey0
+WarningMsg     red          background
+WildMenu       background   light_orange
+
+
+Comment        grey2        background
+
+Constant       orange       background
+String         green        background
+Character      ->           Constant
+Number         ->           Constant
+Boolean        ->           Constant
+Float          ->           Constant
+
+Identifier     blue         background
+Function       ->           Identifier
+
+Statement      purple       background
+Conditional    ->           Statement
+Repeat         ->           Statement
+Label          ->           Statement
+Operator       ->           Statement
+Keyword        ->           Statement
+Exception      ->           Statement
+
+PreProc        ->           Statement
+Include        ->           Statement
+Define         ->           Statement
+Macro          ->           Statement
+PreCondit      ->           Statement
+
+Type           light_orange background
+StorageClass   ->           Type
+Structure      ->           Type
+Typedef        ->           Type
+
+Special        green        background
+SpecialChar    ->           Special
+Tag            ->           Special
+Delimiter      ->           Special
+SpecialComment ->           Special
+Debug          ->           Special
+
+Underlined     foreground   background underline
+
+Ignore         grey1        background
+
+Error          red          background underline
+
+Todo           orange       background
