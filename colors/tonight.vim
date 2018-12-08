@@ -4,6 +4,7 @@
 " Maintainer:   jnnl <juho@jnnl.net>
 " Website:      https://github.com/jnnl/vim-tonight
 " License:      MIT
+" Last Updated: Sat 08 Dec 2018 02:50:13 PM EET
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -90,7 +91,7 @@ hi Type ctermfg=180 ctermbg=235 guifg=#d7af87 guibg=#262626 guisp=NONE cterm=NON
 hi! link StorageClass Type
 hi! link Structure Type
 hi! link Typedef Type
-hi Special ctermfg=143 ctermbg=235 guifg=#afaf5f guibg=#262626 guisp=NONE cterm=NONE gui=NONE
+hi Special ctermfg=251 ctermbg=235 guifg=#c6c6c6 guibg=#262626 guisp=NONE cterm=NONE gui=NONE
 hi! link SpecialChar Special
 hi! link Tag Special
 hi! link Delimiter Special
@@ -188,7 +189,7 @@ finish
 " StorageClass   ->           Type
 " Structure      ->           Type
 " Typedef        ->           Type
-" Special        green        background
+" Special        foreground   background
 " SpecialChar    ->           Special
 " Tag            ->           Special
 " Delimiter      ->           Special

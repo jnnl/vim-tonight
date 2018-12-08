@@ -106,7 +106,7 @@ StorageClass   ->           Type
 Structure      ->           Type
 Typedef        ->           Type
 
-Special        green        background
+Special        foreground   background
 SpecialChar    ->           Special
 Tag            ->           Special
 Delimiter      ->           Special
