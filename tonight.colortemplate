@@ -2,121 +2,135 @@
 
 Full name: Tonight
 Short name: tonight
-Author: jnnl <juho@jnnl.net>
-Maintainer: jnnl <juho@jnnl.net>
+Author: jnnl <juho@jnnl.eu>
+Maintainer: jnnl <juho@jnnl.eu>
 Website: https://github.com/jnnl/vim-tonight
 Description: Never put off till tomorrow what you can do tonight
 License: MIT
+Neovim: yes
 
 Background: dark
 
-Color: foreground   #c6c6c6 ~
-Color: background   #262626 ~
+Color: foreground   #c6c6c6 ~ White
+Color: background   #262626 ~ Black
 
-Color: grey0        #444444 ~
-Color: grey1        #626262 ~
-Color: grey2        #808080 ~
-Color: grey3        #dadada ~
+Color: grey0        #444444 ~ LightGrey
+Color: grey1        #626262 ~ LightGrey
+Color: grey2        #808080 ~ LightGrey
+Color: grey3        #dadada ~ LightGrey
 
-Color: red          #d75f5f ~
-Color: dark_red     #5f0000 ~
-Color: orange       #d7875f ~
-Color: light_orange #d7af87 ~
-Color: green        #afaf5f ~
-Color: dark_green   #005f00 ~
-Color: blue         #87afaf ~
-Color: dark_blue    #005f5f ~
-Color: purple       #af87af ~
+Color: red          #d75f5f ~ Red
+Color: dark_red     #5f0000 ~ DarkRed
+Color: orange       #d7875f ~ Yellow
+Color: light_orange #d7af87 ~ Yellow
+Color: dark_orange  #875f00 ~ Yellow
+Color: green        #afaf5f ~ Green
+Color: dark_green   #005f00 ~ DarkGreen
+Color: blue         #87afaf ~ Blue
+Color: dark_blue    #005f5f ~ DarkBlue
+Color: cyan         #5fd7d7 ~ Cyan
+Color: dark_cyan    #008787 ~ DarkCyan
+Color: purple       #af87af ~ Magenta
+Color: dark_purple  #5f005f ~ DarkMagenta
 
-ColorColumn    foreground   grey0      none
+# Terminal colors
+Term colors: background red orange green blue cyan purple foreground
+Term colors: grey0 dark_red dark_orange dark_green
+Term colors: dark_blue dark_purple dark_cyan grey3
+
+# Highlight definitions
+Variant: gui
+#if get(g:, '@optionprefix_transp_bg', 0) && !has('gui_running')
+Variant: 256 8
+#if get(g:, '@optionprefix_transp_bg', 0)
+Variant: gui 256 8
+    Normal      foreground      none
+    Terminal    foreground      none
+#else
+    Normal      foreground      background
+    Terminal    foreground      background
+#endif
+
+# Group        Foreground   Background  Attributes
+Boolean        ->           Constant
+Character      ->           Constant
+ColorColumn    foreground   grey0
+Comment        grey2        none
 Conceal        foreground   grey0
+Conditional    ->           Statement
+Constant       orange       none
 Cursor         none         none       reverse
 CursorColumn   ->           CursorLine
-CursorLine     foreground   grey0      none
+CursorLine     foreground   grey0
 CursorLineNr   grey1        background
+Debug          ->           Special
+Define         ->           Statement
+Delimiter      ->           Special
 DiffAdd        grey3        dark_green
-DiffDelete     dark_red     dark_red
 DiffChange     none         grey0
+DiffDelete     dark_red     dark_red
 DiffText       none         dark_blue
 Directory      blue         background
 EndOfBuffer    grey0        background
+Error          red          none       underline
 ErrorMsg       grey3        dark_red
+Exception      ->           Statement
+Float          ->           Constant
 FoldColumn     foreground   background
 Folded         grey2        background
+Function       ->           Identifier
+Identifier     blue         none
+Ignore         grey1        none
 IncSearch      background   orange
+Include        ->           Statement
+Keyword        ->           Statement
+Label          ->           Statement
 LineNr         grey0        background
-MatchParen     none         grey1
+Macro          ->           Statement
+MatchParen     none         grey0
 ModeMsg        green        background
 MoreMsg        green        background
 NonText        grey1        background
 Normal         foreground   background
-Pmenu          foreground   grey1      none
+Number         ->           Constant
+Operator       ->           Statement
+Pmenu          foreground   grey1
 PmenuSbar      grey2        grey2
 PmenuSel       grey1        foreground
 PmenuThumb     grey2        grey1
+PreCondit      ->           Statement
+PreProc        ->           Statement
 Question       green        background
 QuickFixLine   background   light_orange
+Repeat         ->           Statement
 Search         background   light_orange
-SignColumn     foreground   background none
+SignColumn     foreground   background
+Special        foreground   none
+SpecialChar    ->           Special
+SpecialComment ->           Special
 SpecialKey     grey1        background
 SpellBad       red          background italic
 SpellCap       blue         background italic
 SpellLocal     green        background italic
 SpellRare      light_orange background italic
+Statement      purple       none
 StatusLine     light_orange grey0
 StatusLineNC   foreground   grey0
+StorageClass   ->           Type
+String         green        none
+Structure      ->           Type
 TabLine        foreground   grey0
 TabLineFill    foreground   grey0
 TabLineSel     light_orange grey0
+Tag            ->           Special
 Title          grey2        background
+Todo           orange       none
+Type           light_orange none
+Typedef        ->           Type
+Underlined     foreground   none       underline
 VertSplit      grey0        grey0
 Visual         none         grey0
 WarningMsg     red          background
 WildMenu       background   light_orange
 
-
-Comment        grey2        background
-
-Constant       orange       background
-String         green        background
-Character      ->           Constant
-Number         ->           Constant
-Boolean        ->           Constant
-Float          ->           Constant
-
-Identifier     blue         background
-Function       ->           Identifier
-
-Statement      purple       background
-Conditional    ->           Statement
-Repeat         ->           Statement
-Label          ->           Statement
-Operator       ->           Statement
-Keyword        ->           Statement
-Exception      ->           Statement
-
-PreProc        ->           Statement
-Include        ->           Statement
-Define         ->           Statement
-Macro          ->           Statement
-PreCondit      ->           Statement
-
-Type           light_orange background
-StorageClass   ->           Type
-Structure      ->           Type
-Typedef        ->           Type
-
-Special        foreground   background
-SpecialChar    ->           Special
-Tag            ->           Special
-Delimiter      ->           Special
-SpecialComment ->           Special
-Debug          ->           Special
-
-Underlined     foreground   background underline
-
-Ignore         grey1        background
-
-Error          red          background underline
-
-Todo           orange       background
+NormalFloat    foreground   grey0
